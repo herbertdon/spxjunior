@@ -11,14 +11,21 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(classes=CDPlayerConfig.class)
 @ContextConfiguration("classpath*:/application-context.xml")
-
-
 public class CDPlayerTest {
+
   @Autowired
   private CompactDisc cd;
-  
+
+  @Autowired
+  private MediaPlayer cdPlayer;
+
   @Test
   public void cdShouldNotBeNull(){
     assertNotNull(cd);
+  }
+
+  @Test
+  public void play(){
+    cdPlayer.play();
   }
 }
