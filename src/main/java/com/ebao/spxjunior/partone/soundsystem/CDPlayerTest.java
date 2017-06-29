@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
+
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -19,6 +21,9 @@ public class CDPlayerTest {
   @Autowired
   private MediaPlayer cdPlayer;
 
+  @Resource(name = "blankDisk")
+  private CompactDisc blankDisk;
+
   @Test
   public void cdShouldNotBeNull(){
     assertNotNull(cd);
@@ -27,5 +32,9 @@ public class CDPlayerTest {
   @Test
   public void play(){
     cdPlayer.play();
+  }
+
+  public void testAopWithArgs(){
+    blankDisk.playTrack(1);
   }
 }

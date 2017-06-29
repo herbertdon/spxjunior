@@ -16,4 +16,15 @@
     <aop:aspectj-autoproxy />
 
     <bean class="com.ebao.spxjunior.partone.concert.Audience" />
+    <bean id="blankDisk" class="com.ebao.spxjunior.partone.soundsystem.BlankDisk">
+        <property name="artist" value="The Beatles" />
+        <property name="title" value="Sgt. Pepper's Lonely hearts Club Band"/>
+        <property name="tracks">
+            <list>
+                <value>Sgt. Pepper's Lonely hearts Club Band</value>
+                <value>Lucky in the sky with diamonds</value>
+                <value>Fixing a hole</value>
+            </list>
+        </property>
+    </bean>
 </beans>
