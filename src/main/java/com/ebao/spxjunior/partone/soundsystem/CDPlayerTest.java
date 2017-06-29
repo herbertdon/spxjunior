@@ -2,7 +2,6 @@ package com.ebao.spxjunior.partone.soundsystem;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -15,26 +14,31 @@ import static org.junit.Assert.assertNotNull;
 @ContextConfiguration("classpath*:/application-context.xml")
 public class CDPlayerTest {
 
-  @Autowired
+  @Resource(name = "sgtPepper")
   private CompactDisc cd;
 
-  @Autowired
-  private MediaPlayer cdPlayer;
+/*  @Resource(name = "cdPlayer")
+  private MediaPlayer cdPlayer;*/
 
   @Resource(name = "blankDisk")
   private CompactDisc blankDisk;
 
-  @Test
+//  @Test
   public void cdShouldNotBeNull(){
     assertNotNull(cd);
   }
 
-  @Test
+/*  @Test
   public void play(){
     cdPlayer.play();
-  }
+  }*/
 
+  @Test
   public void testAopWithArgs(){
     blankDisk.playTrack(1);
   }
+  
+ /* public static void main(String[] args){
+	  
+  }*/
 }
