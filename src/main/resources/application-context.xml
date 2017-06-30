@@ -27,4 +27,6 @@
             </list>
         </property>
     </bean>
+    
+    <bean class="com.ebao.spxjunior.partone.soundsystem.TrackCounter" />
 </beans>

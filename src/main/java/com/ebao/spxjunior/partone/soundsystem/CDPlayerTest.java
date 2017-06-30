@@ -17,8 +17,8 @@ public class CDPlayerTest {
   @Resource(name = "sgtPepper")
   private CompactDisc cd;
 
-/*  @Resource(name = "cdPlayer")
-  private MediaPlayer cdPlayer;*/
+  @Resource(name = "cdPlayer")
+  private MediaPlayer cdPlayer;
 
   @Resource(name = "blankDisk")
   private CompactDisc blankDisk;
@@ -28,17 +28,15 @@ public class CDPlayerTest {
     assertNotNull(cd);
   }
 
-/*  @Test
+//  @Test
   public void play(){
     cdPlayer.play();
-  }*/
+  }
 
   @Test
   public void testAopWithArgs(){
     blankDisk.playTrack(1);
+    blankDisk.playTrack(1);
+    blankDisk.playTrack(1);
   }
-  
- /* public static void main(String[] args){
-	  
-  }*/
 }
