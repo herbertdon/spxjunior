@@ -3,6 +3,7 @@
   <groupId>com.ebao.herbertdon</groupId>
   <artifactId>spxjunior</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
