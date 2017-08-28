@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String home() {
+    System.out.println("Controller received the request from the client.");
     return "home";
   }
 }
