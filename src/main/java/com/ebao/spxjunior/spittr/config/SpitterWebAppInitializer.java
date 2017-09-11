@@ -2,7 +2,9 @@ package com.ebao.spxjunior.spittr.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpitterWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class SpitterWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer
+
+  {
 
   @Override
   protected Class<?>[] getRootConfigClasses() {

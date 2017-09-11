@@ -11,9 +11,10 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- if java config class is scaned, Spring will also load the java config as well -->
-    <context:component-scan base-package="com.ebao.spxjunior.partone" />
+    <!--<context:component-scan base-package="com.ebao.spxjunior.partone" />-->
 
-    <aop:aspectj-autoproxy />
+    <!-- part 1 using only-->
+    <!--<aop:aspectj-autoproxy />
 
     <bean class="com.ebao.spxjunior.partone.concert.Audience" />
     <bean id="blankDisk" class="com.ebao.spxjunior.partone.soundsystem.BlankDisk">
@@ -28,5 +29,21 @@
         </property>
     </bean>
     
-    <bean class="com.ebao.spxjunior.partone.soundsystem.TrackCounter" />
+    <bean class="com.ebao.spxjunior.partone.soundsystem.TrackCounter" />-->
+
+    <!-- need the following config for enabling xml based config-->
+<!--  <context:component-scan base-package="com.ebao.spxjunior.spittr" />
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/spxjunior?useUnicode=true&amp;characterEncoding=utf8" />
+        <property name="username" value="root" />
+        <property name="password" value="passw0rd" />
+        <property name="initialSize" value="2" />
+        <property name="maxActive" value="10" />
+        <property name="maxIdle" value="2" />
+    </bean>
+  <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+    <property name="dataSource" ref="dataSource" />
+  </bean>-->
+
 </beans>
