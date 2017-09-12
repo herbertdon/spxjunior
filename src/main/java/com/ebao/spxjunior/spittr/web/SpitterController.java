@@ -32,6 +32,9 @@ public class SpitterController {
     return "registerForm";
   }
 
+  //@Valid注解标注了Spitter对象,这个对象来自于用户提交的表单构建而成,Spring会对@Valid对象进行合法性进行校验.
+  //校验的内容在POJO中标注
+  //POJO中的校验注解都是JAVA validation API接口,实现是Hibernate Validation提供.
   @RequestMapping(value="/register", method=POST)
   public String processRegistration(
       @Valid Spitter spitter,
@@ -41,6 +44,7 @@ public class SpitterController {
     }
 
     spitterRepository.save(spitter);
+    //这里不能用forward,forward服务器内跳转到showSpitterProfile请求,请求方式仍然为POST,而show只接受GET.
     return "redirect:/spitter/" + spitter.getUsername();
   }
 
