@@ -2,9 +2,14 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf" %>
 <%@ page session="false" %>
 <html>
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="<c:url value="/resources/style.css" />">
+</head>
+<body>
 <h1>Register</h1>
-<sf:form method="POST" modelAttribute="spitter" >
-    <sf:errors path="*" element="div" cssClass="errors" />
+<sf:form method="POST" modelAttribute="spitter">
+    <sf:errors path="*" element="div" cssClass="errors"/>
     <sf:label path="firstName"
               cssErrorClass="error">First Name</sf:label>:
     <sf:input path="firstName"/><br/>
@@ -20,8 +25,9 @@
     <sf:label path="password"
               cssErrorClass="error">Password</sf:label>:
     <sf:password path="password"/><br/>
-    <input type="submit" value="Register" />
+    <input type="submit" value="Register"/>
 </sf:form>
+</body>
 </html>
 
 
